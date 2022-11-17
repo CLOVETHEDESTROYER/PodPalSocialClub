@@ -13,7 +13,7 @@ function Body({ spotify }) {
   const playPlaylist = (id) => {
     spotify
       .play({
-        context_uri: [`spotify:playlist:${id}`],
+        context_uri: `spotify:playlist:${id}`,
       })
       .then((res) => {
         spotify.getMyCurrentPlayingTrack().then((r) => {
@@ -67,7 +67,7 @@ function Body({ spotify }) {
             className="body__shuffle"
             onClick={playPlaylist}
           />
-          <FavoriteIcon fontSize="large" />
+          <FavoriteIcon fontSize="large" />    
           <MoreHorizIcon />
         </div>
 
