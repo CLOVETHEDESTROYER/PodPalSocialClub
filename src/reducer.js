@@ -60,6 +60,11 @@ const reducer = (state, action) => {
         ...state,
         playlists: action.playlists,
       };
+      case "SET_PODCASTS":
+      return {
+        ...state,
+        playlists: action.shows,
+      };
     default:
       return state;
   }

@@ -13,7 +13,7 @@ function SongRow({ track, playSong }) {
           {track.album.name}
         </p>
       </div>
-    </div>
+    </div>    
   );
 }
 

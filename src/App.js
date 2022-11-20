@@ -10,7 +10,7 @@ import Login from "./Login";
 const s = new SpotifyWebApi();
 
 function App() {
-  const [{ user, token } , dispatch] = useStateValue();
+  const [{ token, user } , dispatch] = useStateValue();
 
   useEffect(() => {
     // Set token
@@ -26,10 +26,10 @@ function App() {
         token: _token,
       });
 
-      s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+      s.getPlaylist("47JJqjN5fyzD7UE7PgOPgW").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: response,
+          discover_weekly: response,  
         })
       );
 
@@ -59,6 +59,7 @@ function App() {
         });
       });
     }
+  
     console.log("ihave a token", token);
   }, [token, dispatch]);
 
